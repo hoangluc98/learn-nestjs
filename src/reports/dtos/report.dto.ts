@@ -5,6 +5,9 @@ export class ReportDto {
   make: string;
 
   @Expose()
+  id: number;
+
+  @Expose()
   model: string;
 
   @Expose()
@@ -21,6 +24,9 @@ export class ReportDto {
 
   @Expose()
   price: number;
+
+  @Expose()
+  approved: boolean;
 
   @Transform(({ obj }) => obj.user.id)
   @Expose()
